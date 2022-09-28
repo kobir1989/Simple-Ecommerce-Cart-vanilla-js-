@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/50ba960c66.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1280px',
+            '2xl': '1440px',
+          },
+          colors: {
+            lightGray: '#EEEEEE',
+            red: '#FA7070',
+            dark: '#181818',
+            white: '#FFFFFF',
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Shoping Cart</title>
+  </head>
+  <body class="bg-[#f2f2f2]">
+    <header class="lg:w-8/12 mx-auto w-full">
+      <nav class="flex items-center justify-between m-10 text-[1.2rem]">
+        <div><h2>Ecommerce</h2></div>
+        <div>
+          <ul class="flex gap-6">
+            <li>Home</li>
+            <li>Contract Us</li>
+            <li>About Us</li>
+          </ul>
+        </div>
+        <div class="relative">
+          <button id="cartBtn" class="flex gap-2" onclick="openCartWindow()">
+            <span><i class="fa-solid fa-cart-shopping"></i></span>
+            <span>Cart</span>
+          </button>
+        </div>
+      </nav>
+      <!----==Cart Box Hidden===-->
+      <div
+        id="cartBox"
+        class="hidden w-4/12 bg-white rounded-xl p-8 absolute right-[18%] z-20"
+      >
+        <p
+          onclick="removeWindow()"
+          class="z-40 text-red text-[1.4rem] absolute top-2 right-4"
+        >
+          X
+        </p>
+        <!-- <div
+          class="relative flex items-center justify-evenly border-[1px] border-lightGray p-4"
+        >
+          <div id="imgCart" class="w-[8rem] h-[8rem]">
+           
+          </div>
+          <div>
+            <h2 id="name" class="text-[1.5rem]">Headphone</h2>
+            <p class="text-[1.2rem]">Quentity: 1</p>
+            <p id="price" class="text-[1.5rem] text-red">Price: 200</p>
+          </div>
+        </div> -->
+        <!-- <div class="flex items-center justify-evenly">
+          <p class="text-[1.5rem]">Total</p>
+          <p id="totalPrice" class="text-[1.5rem] text-red"></p>
+        </div> -->
+      </div>
+    </header>
+    <main>
+      <div class="my-20 text-center">
+        <h2 class="text-[2rem]">All Products</h2>
+      </div>
+      <!-----Cart-->
+      <div
+        class="w-8/12 mx-auto mt-20 flex flex-wrap gap-8 gap-y-16 items-center justify-center mb-20"
+        id="productBox"
+      >
+        <!-- <div class="bg-white w-[15rem] rounded-2xl shadow-2xl" id="productCart">
+          <div class="w-[15rem] h-[15rem]">
+            <img
+              class="w-full h-full rounded-2xl"
+              src="./img/nike-1.webp"
+              alt=""
+            />
+          </div>
+          <div class="p-4">
+            <h2 class="text-[1.2rem]">Nike Shoe new 2022</h2>
+            <h2 class="text-[1.2rem] text-red">Only $299</h2>
+            <div
+              class="w-[4.5rem] h-[2.5rem] bg-red mt-4 flex items-center justify-center"
+            >
+              <button
+                id="addToCart"
+                class="text-white font-medium text-[1.2rem]"
+              >
+                + Add
+              </button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
+    <script src="./DUMMY_DATA.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
